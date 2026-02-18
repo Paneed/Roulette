@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roulette des Noms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow glow-a" aria-hidden="true"></div>
+  <div class="bg-glow glow-b" aria-hidden="true"></div>
+
+  <main class="app">
+    <section class="panel panel-right">
+      <div class="wheel-wrap">
+        <div class="pointer" id="pointer" aria-hidden="true"></div>
+        <canvas id="wheelCanvas" width="620" height="620" aria-label="Roulette des noms"></canvas>
+      </div>
+      <div class="actions">
+        <button id="spinBtn" class="btn btn-primary">Lancer</button>
+      </div>
+      <div id="result" class="result" aria-live="polite">Clique sur Lancer.</div>
+    </section>
+  </main>
+
+  <div id="winnerOverlay" class="winner-overlay" aria-live="assertive" aria-atomic="true">
+    <div class="winner-card">
+      <p class="winner-label">Et le gagnant est...</p>
+      <p id="winnerName" class="winner-name">Emma</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
